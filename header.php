@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package _s
+ * @package rmp-base
  */
 
 ?><!DOCTYPE html>
@@ -20,7 +20,10 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e(
+			'Skip to content',
+			'rmp-base'
+		); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
@@ -29,8 +32,12 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_s' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			<button class="menu-toggle" aria-controls="primary-menu"
+					aria-expanded="false"><?php esc_html_e(
+					'Primary Menu',
+					'rmp-base'
+				); ?></button>
+			<?php wp_nav_menu( [ 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ] ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

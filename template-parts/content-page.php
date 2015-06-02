@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package _s
+ * @package rmp-base
  */
 
 ?>
@@ -15,15 +15,20 @@
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', '_s' ),
+			wp_link_pages( [
+				'before' => '<div class="page-links">' .
+							esc_html__('Pages:', 'rmp-base'),
 				'after'  => '</div>',
-			) );
+			] );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php edit_post_link( esc_html__( 'Edit', '_s' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link(
+			esc_html__('Edit', 'rmp-base'),
+			'<span class="edit-link">',
+			'</span>'
+		); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
 
