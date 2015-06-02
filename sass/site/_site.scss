@@ -1,11 +1,16 @@
 @import "../layout/content-sidebar";
 //@import "../layout/sidebar-content";
-@import "../layout/block";
+
+#page {
+  width: $size__site-outer;
+  margin: auto;
+}
 
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
 @import "primary/posts-and-pages";
+@import "../templates/page-full-width";
 
 /*--------------------------------------------------------------
 ## Asides
