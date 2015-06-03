@@ -627,6 +627,16 @@ body.page-template-page-full-width .site-main {
   display: block; }
 
 /*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+.header-image {
+  float: right;
+  width: 50%; }
+
+.site-branding {
+  float: left; }
+
+/*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
 * {
@@ -646,9 +656,6 @@ html, body, #page {
 
 .site-footer, .page-wrap:after {
   height: 2em; }
-
-.site-footer {
-  background: orange; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
