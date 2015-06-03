@@ -463,7 +463,12 @@ a {
     position: relative; }
   .main-navigation a {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    background-color: #cde;
+    color: #000; }
+  .main-navigation a:hover {
+    background-color: #def;
+    color: #000; }
 
 /* Small menu. */
 .menu-toggle,
@@ -492,6 +497,16 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+.main-navigation ul li {
+  display: inline-block;
+  width: 23.5%;
+  margin-left: 2%; }
+  .main-navigation ul li a {
+    padding: 0.5em;
+    text-align: center; }
+.main-navigation ul li:first-child {
+  margin-left: 0; }
 
 /*--------------------------------------------------------------
 # Accessibility
