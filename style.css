@@ -230,6 +230,24 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   clear: both; }
 
+h1 {
+  color: #404040; }
+
+h2 {
+  color: #404040; }
+
+h3 {
+  color: #404040; }
+
+h4 {
+  color: #404040; }
+
+h5 {
+  color: #404040; }
+
+h6 {
+  color: #404040; }
+
 p {
   margin-bottom: 1.5em; }
 
@@ -404,6 +422,9 @@ a {
     outline: thin dotted; }
   a:hover, a:active {
     outline: 0; }
+
+.site-title a {
+  color: #404040; }
 
 /*--------------------------------------------------------------
 ## Menus

@@ -13,6 +13,13 @@ $color__link-visited: purple;
 $color__link-hover: midnightblue;
 $color__text-main: #404040;
 
+$color__text-h1: $color__text-main;
+$color__text-h2: $color__text-h1;
+$color__text-h3: $color__text-h1;
+$color__text-h4: $color__text-h1;
+$color__text-h5: $color__text-h1;
+$color__text-h6: $color__text-h1;
+
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
