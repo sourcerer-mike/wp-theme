@@ -464,11 +464,11 @@ a {
   .main-navigation a {
     display: block;
     text-decoration: none;
-    background-color: #cde;
-    color: #000; }
+    background-color: #009688;
+    color: #fff; }
   .main-navigation a:hover {
-    background-color: #def;
-    color: #000; }
+    background-color: #009688;
+    color: #fff; }
 
 /* Small menu. */
 .menu-toggle,
@@ -498,21 +498,24 @@ a {
   text-align: right;
   width: 50%; }
 
-.main-navigation ul li {
-  display: inline-block;
-  width: 23.5%;
-  margin-left: 2%; }
+.main-navigation {
+  background-color: #009688; }
+  .main-navigation ul li:first-child {
+    font-weight: 600;
+    border-right: 1px dotted #00c9b6; }
+    .main-navigation ul li:first-child a {
+      padding: 1em 2em; }
   .main-navigation ul li a {
-    padding: 0.5em;
-    text-align: center; }
-.main-navigation ul li:first-child {
-  margin-left: 0; }
-
-.main-navigation ul li a {
-  transition: all .2s ease-in-out; }
-
-.main-navigation ul li a:hover {
-  transform: scale(1.1); }
+    padding: 1em 0.5em;
+    text-align: center;
+    color: #fff;
+    -webkit-transition: background-color 1.5s;
+    -moz-transition: background-color 1.5s;
+    -o-transition: background-color 1.5s;
+    -ms-transition: background-color 1.5s;
+    transition: background-color 1.5s; }
+  .main-navigation ul li a:focus, .main-navigation ul li a:active {
+    background-color: #00c9b6; }
 
 /*--------------------------------------------------------------
 # Accessibility

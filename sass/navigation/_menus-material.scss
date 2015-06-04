@@ -1,0 +1,35 @@
+$navigation_menus-material-background: #009688;
+
+.main-navigation {
+  background-color: $navigation_menus-material-background;
+  ul {
+
+    li:first-child {
+      font-weight: 600;
+      border-right: 1px dotted lighten($navigation_menus-material-background, 10);
+
+      a {
+        padding: 1em 2em;
+      }
+    }
+
+    li {
+
+      a {
+        padding: 1em 0.5em;
+        text-align: center;
+        color: #fff;
+
+        -webkit-transition: background-color 1.5s;
+        -moz-transition: background-color 1.5s;
+        -o-transition: background-color 1.5s;
+        -ms-transition: background-color 1.5s;
+        transition: background-color 1.5s;
+      }
+
+      a:focus, a:active {
+        background-color: lighten($navigation_menus-material-background, 10);
+      }
+    }
+  }
+}
