@@ -227,26 +227,10 @@ textarea {
   font-size: 1rem;
   line-height: 1.5; }
 
-h1, h2, h3, h4, h5, h6 {
-  clear: both; }
-
-h1 {
-  color: #404040; }
-
-h2 {
-  color: #404040; }
-
-h3 {
-  color: #404040; }
-
-h4 {
-  color: #404040; }
-
-h5 {
-  color: #404040; }
-
-h6 {
-  color: #404040; }
+blockquote {
+  margin: 0 1em;
+  border-left: 4px solid #ccc;
+  padding: 0 0 0 0.5em; }
 
 p {
   margin-bottom: 1.5em; }
@@ -287,10 +271,26 @@ mark, ins {
 big {
   font-size: 125%; }
 
-blockquote {
-  margin: 0 1em;
-  border-left: 4px solid #ccc;
-  padding: 0 0 0 0.5em; }
+h1, h2, h3, h4, h5, h6 {
+  clear: both; }
+
+h1 {
+  color: #404040; }
+
+h2 {
+  color: #404040; }
+
+h3 {
+  color: #404040; }
+
+h4 {
+  color: #404040; }
+
+h5 {
+  color: #404040; }
+
+h6 {
+  color: #404040; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -450,7 +450,6 @@ a {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
       position: absolute;
-      top: 1.5em;
       left: -999em;
       z-index: 99999; }
       .main-navigation ul ul ul {
@@ -520,13 +519,12 @@ a {
     -o-transition: all .5s;
     -ms-transition: all .5s;
     transition: all .5s; }
+  .main-navigation ul li a:hover {
+    background-color: #005545; }
   .main-navigation ul li a:focus, .main-navigation ul li a:active {
     background-color: #003b30;
     border-top: 3px solid #fff;
-    border-bottom: 3px solid #fff;
-    outline: 0; }
-    .main-navigation ul li a:focus ::-moz-focus-inner, .main-navigation ul li a:active ::-moz-focus-inner {
-      outline: 0; }
+    border-bottom: 3px solid #fff; }
 
 /*--------------------------------------------------------------
 # Accessibility

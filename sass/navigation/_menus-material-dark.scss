@@ -32,18 +32,17 @@ $navigation_menus-material-background: #006e5a;
         transition: all .5s;
       }
 
+      a:hover {
+        background-color: darken($navigation_menus-material-background, 5);
+      }
+
       a:focus, a:active {
         background-color: darken($navigation_menus-material-background, 10);
 
         border-top: 3px solid $color__background-body;
         border-bottom: 3px solid $color__background-body;
-
-        outline: 0;
-
-        ::-moz-focus-inner {
-          outline: 0;
-        }
       }
+
     }
   }
 }
