@@ -18,6 +18,7 @@ $navigation_menus-material-background: #006e5a;
 
       a:hover {
         background-color: darken($navigation_menus-material-background, 5);
+        border-color: darken($navigation_menus-material-background, 5);
       }
 
       a:focus, a:active {
