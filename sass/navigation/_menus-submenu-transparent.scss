@@ -1,0 +1,27 @@
+$navigation_menus-material-background: #006e5a;
+
+.main-navigation {
+  ul {
+    ul {
+      box-shadow: none;
+    }
+
+    li {
+      ul {
+        li {
+          a {
+            opacity: 0.8;
+          }
+          a:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+}

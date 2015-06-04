@@ -38,4 +38,5 @@ Quick start by just (un-)commenting single code-lines to enable or disable thing
   - Tiles that enlarge on hover.
   - Material designed bar with items that highlight on action.
   - Material designed bar that feels like you press buttons down.
+  - Semi-Transparent sub-menus
 - Simple Blockqoute design.
