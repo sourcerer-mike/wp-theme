@@ -76,10 +76,10 @@ if ($right_sidebars) {
 		<?php endif; ?>
 		<div class="site-info">
 			<a href="<?php echo esc_url(
-				__('http://screaming-dev.de/', 'rmp-base')
+				__('https://github.com/sourcerer-mike/wp-theme', 'rmp-base')
 			); ?>">
 				<?php printf(
-					esc_html__('Proudly powered by %s', 'rmp-base'),
+					esc_html__('Started with a modular base theme.', 'rmp-base'),
 					'WordPress'
 				); ?>
 			</a>
