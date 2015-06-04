@@ -501,30 +501,40 @@ a {
 
 .main-navigation {
   background-color: #006e5a; }
-  .main-navigation ul li:first-child {
+  .main-navigation > div > ul > li:first-child {
     font-weight: 600;
     border-right: 1px dotted #003b30; }
-    .main-navigation ul li:first-child a {
+    .main-navigation > div > ul > li:first-child a {
       padding: 1em 2em; }
   .main-navigation ul li a {
     padding: 1em 0.5em;
     text-align: center;
     background-color: #006e5a;
     color: #fff;
-    outline: 0;
-    border-top: 3px solid #006e5a;
-    border-bottom: 3px solid #006e5a;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    -o-transition: all .5s;
-    -ms-transition: all .5s;
-    transition: all .5s; }
-  .main-navigation ul li a:hover {
-    background-color: #005545; }
-  .main-navigation ul li a:focus, .main-navigation ul li a:active {
-    background-color: #003b30;
-    border-top: 3px solid #fff;
-    border-bottom: 3px solid #fff; }
+    outline: 0; }
+
+.main-navigation ul li a {
+  border-top: 3px solid #006e5a;
+  border-bottom: 3px solid #006e5a;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  -ms-transition: all .5s;
+  transition: all .5s; }
+.main-navigation ul li a:hover {
+  background-color: #005545; }
+.main-navigation ul li a:focus, .main-navigation ul li a:active {
+  background-color: #003b30;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff; }
+.main-navigation ul li ul a {
+  border: 0;
+  border-left: 3px solid #006e5a;
+  border-right: 3px solid #006e5a; }
+.main-navigation ul li ul a:focus, .main-navigation ul li ul a:active {
+  border: 0;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff; }
 
 /*--------------------------------------------------------------
 # Accessibility
