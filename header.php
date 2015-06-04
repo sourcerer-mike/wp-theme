@@ -7,6 +7,31 @@
  * @package rmp-base
  */
 
+$headers = get_posts(
+	[
+		'post_type'  => 'theme_header',
+		'meta_key'   => '_page_template',
+		'meta_value' => get_page_template_slug()
+	]
+);
+
+if (!$headers) {
+	$headers = get_posts(
+		[
+			'post_type'  => 'theme_header',
+			'meta_key'   => '_page_template',
+			'meta_value' => '_default'
+		]
+	);
+}
+
+$header = '';
+if ($headers) {
+	$header = current($headers);
+	$header = siteorigin_panels_render($header->ID);
+	$header = do_shortcode($header);
+}
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -27,15 +52,19 @@
 		); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-        <?php if ( get_header_image() ) : ?>
-            <div class="header-image">
-                <img src="<?php header_image(); ?>" alt="">
-            </div>
-        <?php endif; ?>
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div><!-- .site-branding -->
+		<?php if ($header): ?>
+			<?php echo $header ?>
+		<?php else: ?>
+			<?php if ( get_header_image() ) : ?>
+				<div class="header-image">
+					<img src="<?php header_image(); ?>" alt="">
+				</div>
+			<?php endif; ?>
+			<div class="site-branding">
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			</div><!-- .site-branding -->
+		<?php endif; ?>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu"

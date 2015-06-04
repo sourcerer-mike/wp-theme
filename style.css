@@ -702,6 +702,9 @@ body.page-template-page-full-width .site-main {
 .site-branding {
   float: left; }
 
+#masthead .textwidget p {
+  margin-bottom: 0; }
+
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/

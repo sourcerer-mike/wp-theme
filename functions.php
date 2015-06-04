@@ -176,4 +176,5 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+require_once get_template_directory() . '/inc/header.php';
 require_once get_template_directory() . '/inc/footer.php';
