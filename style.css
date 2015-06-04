@@ -440,7 +440,8 @@ a {
   clear: both;
   display: block;
   float: left;
-  width: 100%; }
+  width: 100%;
+  line-height: 1; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -522,7 +523,8 @@ a {
   -ms-transition: all .5s;
   transition: all .5s; }
 .main-navigation ul li a:hover {
-  background-color: #005545; }
+  background-color: #005545;
+  border-color: #005545; }
 .main-navigation ul li a:focus, .main-navigation ul li a:active {
   background-color: #003b30;
   border-top: 3px solid #fff;
@@ -535,6 +537,15 @@ a {
   border: 0;
   border-left: 3px solid #fff;
   border-right: 3px solid #fff; }
+
+.main-navigation ul li ul li a {
+  opacity: 0.8; }
+.main-navigation ul li ul li a:hover {
+  opacity: 1; }
+
+canvas {
+  position: absolute;
+  top: 0; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -626,22 +637,14 @@ a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-.content-area {
-  float: left;
-  margin: 0 -25% 0 0;
-  width: 100%; }
+#content {
+  display: table-row; }
 
-.site-main {
-  margin: 0 25% 0 0; }
+#left-sidebar, #primary, #right-sidebar {
+  display: table-cell; }
 
-.site-content .widget-area {
-  float: right;
-  overflow: hidden;
-  width: 25%; }
-
-.site-footer {
-  clear: both;
-  width: 100%; }
+#left-sidebar, #right-sidebar {
+  width: 20%; }
 
 #page {
   width: 720px;
@@ -701,9 +704,6 @@ body.page-template-page-full-width .site-main {
 
 .site-branding {
   float: left; }
-
-#masthead .textwidget p {
-  margin-bottom: 0; }
 
 /*--------------------------------------------------------------
 ## Footer

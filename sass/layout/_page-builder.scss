@@ -1,0 +1,11 @@
+#content {
+  display: table-row;
+}
+
+#left-sidebar, #primary, #right-sidebar {
+  display: table-cell;
+}
+
+#left-sidebar, #right-sidebar {
+  width: 20%;
+}

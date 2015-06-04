@@ -178,3 +178,6 @@ require get_template_directory() . '/inc/jetpack.php';
 
 require_once get_template_directory() . '/inc/header.php';
 require_once get_template_directory() . '/inc/footer.php';
+
+require_once get_template_directory() . '/inc/cpt-left-sidebar.php';
+require_once get_template_directory() . '/inc/cpt-right-sidebar.php';

@@ -32,6 +32,31 @@ if ($headers) {
 	$header = do_shortcode($header);
 }
 
+$left_sidebars = get_posts(
+	[
+		'post_type'  => 'theme_left_sidebar',
+		'meta_key'   => '_page_template',
+		'meta_value' => get_page_template_slug()
+	]
+);
+
+if (!$left_sidebars) {
+	$left_sidebars = get_posts(
+		[
+			'post_type'  => 'theme_left_sidebar',
+			'meta_key'   => '_page_template',
+			'meta_value' => '_default'
+		]
+	);
+}
+
+$left_sidebar = '';
+if ($left_sidebars) {
+	$left_sidebar = current( $left_sidebars );
+	$left_sidebar = siteorigin_panels_render( $left_sidebar->ID );
+	$left_sidebar = do_shortcode( $left_sidebar );
+}
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -77,3 +102,9 @@ if ($headers) {
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
+
+		<?php if ($left_sidebar): ?>
+			<div id="left-sidebar" class="widget-area" role="complementary">
+				<?php echo $left_sidebar; ?>
+			</div>
+		<?php endif; ?>

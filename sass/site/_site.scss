@@ -1,5 +1,6 @@
-@import "../layout/content-sidebar";
+//@import "../layout/content-sidebar";
 //@import "../layout/sidebar-content";
+@import "../layout/page-builder";
 
 #page {
   width: $size__site-outer;
@@ -29,7 +30,7 @@
 // Arrangement of image and branding (left-right):
 @import "../layout/header/branding-image";
 //@import "../layout/header/image-branding";
-@import "../layout/header/page-builder";
+//@import "../layout/header/page-builder";
 
 /*--------------------------------------------------------------
 ## Footer
