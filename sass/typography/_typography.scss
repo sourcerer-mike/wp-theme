@@ -9,6 +9,8 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
-@import "headings";
+@import "blockquote-border";
 
 @import "copy";
+
+@import "headings";
