@@ -11,6 +11,15 @@ WP-Theme
 
 ![Preview](https://cloud.githubusercontent.com/assets/2559177/7994534/62c57f6c-0b0e-11e5-9c2e-e74e1a49c02d.png)
 
+Installation
+------------
+
+For the full power please install these plugins:
+
+    wp plugin install --activate black-studio-tinymce-widget
+    wp plugin install --activate siteorigin-panels
+    wp plugin install --activate so-widgets-bundle    
+
 
 Major Features
 --------------
