@@ -176,6 +176,18 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/**
+ * Admin
+ */
+if (is_user_logged_in() && wp_get_current_user()->has_cap('edit_theme_options')) {
+    require_once get_template_directory() . '/inc/admin.php';
+    require_once get_template_directory() . '/inc/toolbar.php';
+}
+
+/**
+ * Wrapper-CPTs
+ */
+
 require_once get_template_directory() . '/inc/header.php';
 require_once get_template_directory() . '/inc/footer.php';
 

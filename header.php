@@ -7,54 +7,16 @@
  * @package rmp-base
  */
 
-$headers = get_posts(
-	[
-		'post_type'  => 'theme_header',
-		'meta_key'   => '_page_template',
-		'meta_value' => get_page_template_slug()
-	]
-);
-
-if (!$headers) {
-	$headers = get_posts(
-		[
-			'post_type'  => 'theme_header',
-			'meta_key'   => '_page_template',
-			'meta_value' => '_default'
-		]
-	);
+if ( $header = theme_get_header() )
+{
+    $header = siteorigin_panels_render( $header->ID );
+    $header = do_shortcode( $header );
 }
 
-$header = '';
-if ($headers) {
-	$header = current($headers);
-	$header = siteorigin_panels_render($header->ID);
-	$header = do_shortcode($header);
-}
-
-$left_sidebars = get_posts(
-	[
-		'post_type'  => 'theme_left_sidebar',
-		'meta_key'   => '_page_template',
-		'meta_value' => get_page_template_slug()
-	]
-);
-
-if (!$left_sidebars) {
-	$left_sidebars = get_posts(
-		[
-			'post_type'  => 'theme_left_sidebar',
-			'meta_key'   => '_page_template',
-			'meta_value' => '_default'
-		]
-	);
-}
-
-$left_sidebar = '';
-if ($left_sidebars) {
-	$left_sidebar = current( $left_sidebars );
-	$left_sidebar = siteorigin_panels_render( $left_sidebar->ID );
-	$left_sidebar = do_shortcode( $left_sidebar );
+if ( $left_sidebar = theme_get_left_sidebar() )
+{
+    $left_sidebar = siteorigin_panels_render( $left_sidebar->ID );
+    $left_sidebar = do_shortcode( $left_sidebar );
 }
 
 ?><!DOCTYPE html>

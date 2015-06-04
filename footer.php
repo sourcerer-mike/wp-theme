@@ -7,54 +7,16 @@
  * @package rmp-base
  */
 
-$posts = get_posts(
-	[
-		'post_type'  => 'theme_footer',
-		'meta_key'   => '_page_template',
-		'meta_value' => get_page_template_slug()
-	]
-);
-
-if (!$posts) {
-	$posts = get_posts(
-		[
-			'post_type'  => 'theme_footer',
-			'meta_key'   => '_page_template',
-			'meta_value' => '_default'
-		]
-	);
+if ( $footer = theme_get_footer() )
+{
+    $footer = siteorigin_panels_render( $footer->ID );
+    $footer = do_shortcode( $footer );
 }
 
-$footer = '';
-if ($posts) {
-	$footer = current($posts);
-	$footer = siteorigin_panels_render($footer->ID);
-	$footer = do_shortcode($footer);
-}
-
-$right_sidebars = get_posts(
-	[
-		'post_type'  => 'theme_right_sidebar',
-		'meta_key'   => '_page_template',
-		'meta_value' => get_page_template_slug()
-	]
-);
-
-if (!$right_sidebars) {
-	$right_sidebars = get_posts(
-		[
-			'post_type'  => 'theme_right_sidebar',
-			'meta_key'   => '_page_template',
-			'meta_value' => '_default'
-		]
-	);
-}
-
-$right_sidebar = '';
-if ($right_sidebars) {
-	$right_sidebar = current( $right_sidebars );
-	$right_sidebar = siteorigin_panels_render( $right_sidebar->ID );
-	$right_sidebar = do_shortcode( $right_sidebar );
+if ( $right_sidebar = theme_get_right_sidebar() )
+{
+    $right_sidebar = siteorigin_panels_render( $right_sidebar->ID );
+    $right_sidebar = do_shortcode( $right_sidebar );
 }
 
 ?>

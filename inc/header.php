@@ -11,7 +11,8 @@ add_action(
                     'singular_name' => __('Header')
                 ],
                 'public'       => true,
-                'show_in_menu' => 'themes.php'
+                'show_in_menu' => 'themes.php',
+	            'show_in_admin_bar' => false,
             ]
         );
     }
@@ -84,3 +85,36 @@ add_action(
         );
     }
 );
+
+$rmp_theme_get_header = null;
+function theme_get_header() {
+    global $rmp_theme_get_header;
+
+    if (null !== $rmp_theme_get_header) {
+        return $rmp_theme_get_header;
+    }
+
+    $rmp_theme_get_header = get_posts(
+        [
+            'post_type'  => 'theme_header',
+            'meta_key'   => '_page_template',
+            'meta_value' => get_page_template_slug()
+        ]
+    );
+
+    if (!$rmp_theme_get_header) {
+        $rmp_theme_get_header = get_posts(
+            [
+                'post_type'  => 'theme_header',
+                'meta_key'   => '_page_template',
+                'meta_value' => '_default'
+            ]
+        );
+    }
+
+    if ($rmp_theme_get_header) {
+        $rmp_theme_get_header = current($rmp_theme_get_header);
+    }
+
+    return $rmp_theme_get_header;
+}
