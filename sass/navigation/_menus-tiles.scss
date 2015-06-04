@@ -3,17 +3,15 @@
 
     li {
       display: inline-block;
-      width: 23.5%;
-      margin-left: 2%;
+      margin-left: 0.5em;
 
       a {
         padding: 0.5em;
         text-align: center;
       }
-
     }
 
-    li:first-child {
+    li:first-child, ul li {
       margin-left: 0;
     }
   }
