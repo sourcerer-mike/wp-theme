@@ -30,6 +30,8 @@ Major Features
 Minor Features
 --------------
 
+Quick start by just (un-)commenting single code-lines to enable or disable things:
+
 - Sticky footer if you want it.
 - Arrange default branding and header image.
 - Multiple Designs for Main Navigation.
