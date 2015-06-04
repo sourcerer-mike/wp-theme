@@ -1,0 +1,28 @@
+$navigation_menus-material-background: #006e5a;
+
+.main-navigation {
+  background-color: $navigation_menus-material-background;
+
+  & > div > ul > li:first-child {
+    font-weight: 600;
+    border-right: 1px dotted darken($navigation_menus-material-background, 10);
+
+    a {
+      padding: 1em 2em;
+    }
+
+  }
+
+  ul {
+
+    li {
+      a {
+        padding: 1em 0.5em;
+        text-align: center;
+        background-color: $navigation_menus-material-background;
+        color: #fff;
+        outline: 0;
+      }
+    }
+  }
+}

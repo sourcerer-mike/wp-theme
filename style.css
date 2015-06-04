@@ -227,8 +227,10 @@ textarea {
   font-size: 1rem;
   line-height: 1.5; }
 
-h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+blockquote {
+  margin: 0 1em;
+  border-left: 4px solid #ccc;
+  padding: 0 0 0 0.5em; }
 
 p {
   margin-bottom: 1.5em; }
@@ -268,6 +270,27 @@ mark, ins {
 
 big {
   font-size: 125%; }
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both; }
+
+h1 {
+  color: #404040; }
+
+h2 {
+  color: #404040; }
+
+h3 {
+  color: #404040; }
+
+h4 {
+  color: #404040; }
+
+h5 {
+  color: #404040; }
+
+h6 {
+  color: #404040; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -395,15 +418,20 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: royalblue;
+  text-decoration: none; }
   a:visited {
     color: purple; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: midnightblue;
+    text-decoration: underline; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
     outline: 0; }
+
+.site-title a {
+  color: #404040; }
 
 /*--------------------------------------------------------------
 ## Menus
@@ -422,7 +450,6 @@ a {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
       position: absolute;
-      top: 1.5em;
       left: -999em;
       z-index: 99999; }
       .main-navigation ul ul ul {
@@ -440,7 +467,9 @@ a {
     position: relative; }
   .main-navigation a {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    background-color: #009688;
+    color: #fff; }
 
 /* Small menu. */
 .menu-toggle,
@@ -469,6 +498,43 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+.main-navigation {
+  background-color: #006e5a; }
+  .main-navigation > div > ul > li:first-child {
+    font-weight: 600;
+    border-right: 1px dotted #003b30; }
+    .main-navigation > div > ul > li:first-child a {
+      padding: 1em 2em; }
+  .main-navigation ul li a {
+    padding: 1em 0.5em;
+    text-align: center;
+    background-color: #006e5a;
+    color: #fff;
+    outline: 0; }
+
+.main-navigation ul li a {
+  border-top: 3px solid #006e5a;
+  border-bottom: 3px solid #006e5a;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  -ms-transition: all .5s;
+  transition: all .5s; }
+.main-navigation ul li a:hover {
+  background-color: #005545; }
+.main-navigation ul li a:focus, .main-navigation ul li a:active {
+  background-color: #003b30;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff; }
+.main-navigation ul li ul a {
+  border: 0;
+  border-left: 3px solid #006e5a;
+  border-right: 3px solid #006e5a; }
+.main-navigation ul li ul a:focus, .main-navigation ul li ul a:active {
+  border: 0;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -625,6 +691,37 @@ body.page-template-page-full-width .site-main {
 
 .bypostauthor {
   display: block; }
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+.header-image {
+  float: right;
+  width: 50%; }
+
+.site-branding {
+  float: left; }
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+* {
+  margin: 0; }
+
+html, body, #page {
+  height: 100%; }
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -2em; }
+
+.page-wrap:after {
+  content: "";
+  display: block; }
+
+.site-footer, .page-wrap:after {
+  height: 2em; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

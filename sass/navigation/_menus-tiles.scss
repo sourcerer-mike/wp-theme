@@ -1,0 +1,18 @@
+.main-navigation {
+  ul {
+
+    li {
+      display: inline-block;
+      margin-left: 0.5em;
+
+      a {
+        padding: 0.5em;
+        text-align: center;
+      }
+    }
+
+    li:first-child, ul li {
+      margin-left: 0;
+    }
+  }
+}

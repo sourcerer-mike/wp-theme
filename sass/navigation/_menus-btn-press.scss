@@ -1,0 +1,46 @@
+$navigation_menus-material-background: #006e5a;
+
+.main-navigation {
+  ul {
+
+    li {
+
+      a {
+        border-top: 3px solid $navigation_menus-material-background;
+        border-bottom: 3px solid $navigation_menus-material-background;
+
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -o-transition: all .5s;
+        -ms-transition: all .5s;
+        transition: all .5s;
+      }
+
+      a:hover {
+        background-color: darken($navigation_menus-material-background, 5);
+      }
+
+      a:focus, a:active {
+        background-color: darken($navigation_menus-material-background, 10);
+
+        border-top: 3px solid $color__background-body;
+        border-bottom: 3px solid $color__background-body;
+      }
+
+      ul {
+        a {
+          border: 0;
+          border-left: 3px solid $navigation_menus-material-background;
+          border-right: 3px solid $navigation_menus-material-background;
+        }
+
+        a:focus, a:active {
+          border: 0;
+          border-left: 3px solid $color__background-body;
+          border-right: 3px solid $color__background-body;
+        }
+      }
+
+    }
+  }
+}

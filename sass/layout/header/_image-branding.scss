@@ -1,0 +1,14 @@
+
+.header-image {
+  float: left;
+  @if ($layout_header_image-width > 0) {
+    width: $layout_header_image-width;
+  }
+}
+
+.site-branding {
+  float: right;
+  @if ($layout_header_branding-width > 0) {
+    width: $layout_header_branding-width;
+  }
+}

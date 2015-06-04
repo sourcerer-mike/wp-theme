@@ -1,0 +1,5 @@
+@mixin ease-in-out($selector) {
+  #{$selector} { transition: all .2s ease-in-out; }
+  #{$selector}:hover { transform: scale(1.1); }
+}
+
