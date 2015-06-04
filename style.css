@@ -508,6 +508,12 @@ a {
 .main-navigation ul li:first-child {
   margin-left: 0; }
 
+.main-navigation ul li a {
+  transition: all .2s ease-in-out; }
+
+.main-navigation ul li a:hover {
+  transform: scale(1.1); }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
