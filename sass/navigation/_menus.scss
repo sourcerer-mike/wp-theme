@@ -62,10 +62,6 @@
         background-color: $navigation_menus_main-navigation_item_background;
         color: $navigation_menus_main-navigation_item_color;
 	}
-    a:hover {
-      background-color: $navigation_menus_main-navigation_item-hover_background;
-      color: $navigation_menus_main-navigation_item-hover_color;
-    }
 
 	.current_page_item > a,
 	.current-menu-item > a,
