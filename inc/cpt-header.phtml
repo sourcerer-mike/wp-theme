@@ -9,10 +9,10 @@ $current = get_post_meta($post->ID, '_page_template', true);
 
 ?>
 
-<?php wp_nonce_field('cpt_right_sidebar_meta_box', 'cpt_right_sidebar_meta_box_nonce'); ?>
+<?php wp_nonce_field('cpt_footer_meta_box', 'cpt_footer_meta_box_nonce'); ?>
 
 <p>
-	<?php echo __('For which template is this right-handed sidebar?') ?><br/>
+	<?php echo __('For which template is this header?') ?><br/>
 </p>
 <table class="form-table">
 	<td>
@@ -32,5 +32,6 @@ $current = get_post_meta($post->ID, '_page_template', true);
 		</select>
 	</td>
 </table>
+
 
 

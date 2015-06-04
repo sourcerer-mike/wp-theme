@@ -11,10 +11,13 @@ $current = get_post_meta($post->ID, '_page_template', true);
 
 <?php wp_nonce_field('cpt_left_sidebar_meta_box', 'cpt_left_sidebar_meta_box_nonce'); ?>
 
+<p>
+	<?php echo __('For which template is this left-handed sidebar?') ?><br/>
+</p>
 <table class="form-table">
     <td>
         <label for="_page_template">
-            <?php echo __('Choose template:') ?>
+            <?php echo __('Template:') ?>
         </label>
     </td>
     <td>

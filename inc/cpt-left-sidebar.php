@@ -3,8 +3,10 @@
 add_action(
     'init',
     function () {
+	    $post_type = 'theme_left_sidebar';
+
         register_post_type(
-            'theme_left_sidebar',
+            $post_type,
             [
                 'labels'       => [
                     'name'          => __('Left Sidebars'),
@@ -15,6 +17,8 @@ add_action(
 	            'show_in_admin_bar' => false,
             ]
         );
+
+	    remove_post_type_support( $post_type, 'title' );
     }
 );
 
@@ -23,11 +27,12 @@ add_action(
     function () {
         add_meta_box(
             'theme_left_sidebar_template_chooser',
-            __('For which template is this left-handed sidebar?'),
+            __('Target template'),
             function ($post) {
                 include get_template_directory() . '/inc/cpt-left-sidebar.phtml';
             },
-            'theme_left_sidebar'
+            'theme_left_sidebar',
+	        'side'
         );
     }
 );

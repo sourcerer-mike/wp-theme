@@ -188,8 +188,7 @@ if (is_user_logged_in() && wp_get_current_user()->has_cap('edit_theme_options'))
  * Wrapper-CPTs
  */
 
-require_once get_template_directory() . '/inc/header.php';
-require_once get_template_directory() . '/inc/footer.php';
-
+require_once get_template_directory() . '/inc/cpt-header.php';
 require_once get_template_directory() . '/inc/cpt-left-sidebar.php';
 require_once get_template_directory() . '/inc/cpt-right-sidebar.php';
+require_once get_template_directory() . '/inc/cpt-footer.php';

@@ -30,12 +30,15 @@ Major Features
 - **Template for tile design**
   Enable some scss files and have a complete tile-designed website.
   Change colors and some shapes to meet your customers demand.
-- **Header for each page template via Backend**
-  Add as many page templates as you like and add or change their individual headers via backend.
-  Use custom headers for every page template and give the customer the ability to make changes by himself.
-- **Footer for each page template via Backend**
-  All those plenty page templates can have custom footer too.
-  Your customer will be able to manage each of them easily via wp-admin.
+  
+### Manage header, footer and sidebars for each page template
+
+![Manage header, sidebars and footer for each page template.](https://cloud.githubusercontent.com/assets/2559177/7996628/a246dd84-0b22-11e5-927d-0d3c31eb8a41.png)
+  
+Add as many page templates as you like and add or change their individual headers via backend.
+Use custom headers for every page template and give the customer the ability to make changes by himself.
+He will be able to manage each of them easily via wp-admin
+and quick access them on each page as shown above.
 
 
 Minor Features

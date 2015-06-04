@@ -3,8 +3,9 @@
 add_action(
     'init',
     function () {
+	    $post_type = 'theme_right_sidebar';
         register_post_type(
-            'theme_right_sidebar',
+            $post_type,
             [
                 'labels'       => [
                     'name'          => __('Right Sidebars'),
@@ -15,6 +16,8 @@ add_action(
 	            'show_in_admin_bar' => false,
             ]
         );
+
+	    remove_post_type_support( $post_type, 'title' );
     }
 );
 
@@ -23,11 +26,12 @@ add_action(
     function () {
         add_meta_box(
             'theme_right_sidebar_template_chooser',
-            __('For which template is this right-handed sidebar?'),
+            __('Target template'),
             function ($post) {
                 include get_template_directory() . '/inc/cpt-right-sidebar.phtml';
             },
-            'theme_right_sidebar'
+            'theme_right_sidebar',
+	        'side'
         );
     }
 );
