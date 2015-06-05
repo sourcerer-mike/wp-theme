@@ -1,0 +1,32 @@
+@mixin design-material-button($selector) {
+  #{$selector} {
+    display: inline-block;
+    padding: 0.5em;
+
+    background-color: $navigation_menus-material-background;
+    color: $design_button_color;
+
+    border-top: 3px solid $navigation_menus-material-background;
+    border-bottom: 3px solid $navigation_menus-material-background;
+
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+    transition: all .5s;
+  }
+
+  #{$selector}:hover {
+    background-color: darken($navigation_menus-material-background, 5);
+    border-color: darken($navigation_menus-material-background, 5);
+
+    text-decoration: none;
+  }
+
+  #{$selector}:focus, #{$selector}:active {
+    background-color: darken($navigation_menus-material-background, 10);
+
+    border-top: 3px solid $color__background-body;
+    border-bottom: 3px solid $color__background-body;
+  }
+}

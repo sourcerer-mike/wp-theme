@@ -5,28 +5,7 @@ $navigation_menus-material-background: $navigation_menus_main-navigation_item_ba
 
     li {
 
-      a {
-        border-top: 3px solid $navigation_menus-material-background;
-        border-bottom: 3px solid $navigation_menus-material-background;
-
-        -webkit-transition: all .5s;
-        -moz-transition: all .5s;
-        -o-transition: all .5s;
-        -ms-transition: all .5s;
-        transition: all .5s;
-      }
-
-      a:hover {
-        background-color: darken($navigation_menus-material-background, 5);
-        border-color: darken($navigation_menus-material-background, 5);
-      }
-
-      a:focus, a:active {
-        background-color: darken($navigation_menus-material-background, 10);
-
-        border-top: 3px solid $color__background-body;
-        border-bottom: 3px solid $color__background-body;
-      }
+      @include design-button("a");
 
       ul {
         a {
@@ -43,5 +22,21 @@ $navigation_menus-material-background: $navigation_menus_main-navigation_item_ba
       }
 
     }
+  }
+}
+
+.entry-footer {
+  @include design-button("a");
+
+  a {
+    border: 0;
+    border-top: 3px solid $navigation_menus-material-background;
+    border-bottom: 3px solid $navigation_menus-material-background;
+  }
+
+  a:focus, a:active {
+    border: 0;
+    border-top: 3px solid $color__background-body;
+    border-bottom: 3px solid $color__background-body;
   }
 }
