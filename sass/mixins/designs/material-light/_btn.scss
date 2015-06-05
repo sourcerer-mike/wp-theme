@@ -1,0 +1,13 @@
+@mixin design-material-light-button($selector) {
+  #{$selector} {
+    -webkit-transition: background-color 1.5s;
+    -moz-transition: background-color 1.5s;
+    -o-transition: background-color 1.5s;
+    -ms-transition: background-color 1.5s;
+    transition: background-color 1.5s;
+  }
+
+  #{$selector}:focus, #{$selector}:active {
+    background-color: lighten($navigation_menus-material-background, 10);
+  }
+}

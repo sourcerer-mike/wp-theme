@@ -1,0 +1,5 @@
+@import "material-light/btn";
+
+@mixin design-button($selector) {
+  @include design-material-light-button("#{$selector}");
+}

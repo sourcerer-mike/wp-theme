@@ -9,7 +9,6 @@ add_action(
     'admin_bar_menu',
     function ( $wp_admin_bar )
     {
-
         // header
         if ( $header = theme_get_header() )
         {
@@ -60,15 +59,17 @@ add_action(
             );
         }
 
-        // content
-        $wp_admin_bar->add_node(
-            array(
-                'id'     => 'theme-edit-content',
-                'title'  => __( 'Edit content' ),
-                'parent' => 'edit',
-                'href'   => admin_url( 'post.php?post=' . get_the_ID() . '&action=edit' ),
-            )
-        );
+        if (is_page() || is_single()) {
+            // content
+            $wp_admin_bar->add_node(
+                array(
+                    'id'     => 'theme-edit-content',
+                    'title'  => __( 'Edit content' ),
+                    'parent' => 'edit',
+                    'href'   => admin_url( 'post.php?post=' . get_the_ID() . '&action=edit' ),
+                )
+            );
+        }
 
         // sidebar right
         if ( $right_sidebar = theme_get_right_sidebar() )
