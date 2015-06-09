@@ -1,4 +1,4 @@
-@mixin design-material-light-button($selector) {
+@mixin button-press-enlight($selector) {
   #{$selector} {
     -webkit-transition: background-color 1.5s;
     -moz-transition: background-color 1.5s;

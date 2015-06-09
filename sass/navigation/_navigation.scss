@@ -8,12 +8,13 @@
 --------------------------------------------------------------*/
 @import "menus";
 
-//@import "menus-tiles";
-//@include ease-in-out(".main-navigation ul li a");
+.main-navigation {
+  a {
+    background-color: $navigation_menus_main-navigation_item_background;
+    @include button-press-down($navigation_menus_main-navigation_item_background, $color__background-body);
 
+    padding: 0.5em;
+  }
+}
 
-//@import "menus-material-light";
-@import "menus-btn-press";
-@import "menus-material-dark";
-
-@import "menus-submenu-transparent";
+//@import "menus-submenu-transparent";

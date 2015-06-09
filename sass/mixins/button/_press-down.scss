@@ -1,0 +1,20 @@
+@mixin button-press-down($color, $pressColor: tranparent) {
+  & {
+    border-bottom: 3px solid $color;
+    border-top: 3px solid $color;
+
+    transition: border .5s;
+    -moz-transition: border .5s;
+    -ms-transition: border .5s;
+    -o-transition: border .5s;
+    -webkit-transition: border .5s;
+  }
+
+  &:hover {
+  }
+
+  &:focus, &:active {
+    border-bottom: 3px solid $pressColor;
+    border-top: 3px solid $pressColor;
+  }
+}
