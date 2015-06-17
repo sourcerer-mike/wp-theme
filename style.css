@@ -323,6 +323,9 @@ hr {
   height: 1px;
   margin-bottom: 1.5em; }
 
+ul, ol {
+  margin: 0 0 1.5em 0; }
+
 ul {
   list-style: square; }
 
