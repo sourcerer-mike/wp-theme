@@ -1,5 +1,5 @@
-@mixin button-press-enlight($selector) {
-  #{$selector} {
+@mixin button-press-enlighten($color) {
+  & {
     -webkit-transition: background-color 1.5s;
     -moz-transition: background-color 1.5s;
     -o-transition: background-color 1.5s;
@@ -7,7 +7,7 @@
     transition: background-color 1.5s;
   }
 
-  #{$selector}:focus, #{$selector}:active {
-    background-color: lighten($navigation_menus-material-background, 10);
+  &:focus, &:active {
+    background-color: lighten($color, 10);
   }
 }

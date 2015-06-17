@@ -1,4 +1,4 @@
-@mixin button-press-down($color, $pressColor: tranparent) {
+@mixin button-press-down($color, $pressColor: #fff) {
   & {
     border-bottom: 3px solid $color;
     border-top: 3px solid $color;
