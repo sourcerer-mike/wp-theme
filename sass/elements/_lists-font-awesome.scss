@@ -1,11 +1,7 @@
-li.arrow-circle-o-right:before {
-  @extend .fa;
-  @extend .fa-arrow-circle-o-right;
-}
-
 div.li-arrow-circle-o-right {
   li:before {
     @extend .fa;
     @extend .fa-arrow-circle-o-right;
+    padding-right: 0.5em;
   }
 }
