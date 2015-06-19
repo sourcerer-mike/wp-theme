@@ -42,7 +42,7 @@ label > small {
 }
 
 @each $class, $form_color, $fa_icon in
-        (error, #f00, exclamation-circle),
+        (error, #f00, exclamation-triangle),
         (warning, #fa3, exclamation-circle),
         (notice, #fe4, info-circle),
         (success, #9f7, check),
@@ -56,6 +56,7 @@ label > small {
       @extend .#{$fa-css-prefix}-#{$fa_icon};
       color: mix($color__text-main, $form_color);
       float:right;
+      font-size: 1.5em;
     }
   }
 }
