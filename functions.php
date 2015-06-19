@@ -176,6 +176,8 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+
+require_once get_template_directory() . '/vendor/autoload.php';
 /**
  * Admin
  */
@@ -192,3 +194,8 @@ require_once get_template_directory() . '/inc/cpt-header.php';
 require_once get_template_directory() . '/inc/cpt-left-sidebar.php';
 require_once get_template_directory() . '/inc/cpt-right-sidebar.php';
 require_once get_template_directory() . '/inc/cpt-footer.php';
+
+/**
+ * Pagespeed
+ */
+require_once get_template_directory() . '/inc/ps-less-html.php';

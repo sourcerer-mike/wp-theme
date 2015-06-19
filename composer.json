@@ -1,5 +1,6 @@
 {
     "require": {
-        "fortawesome/font-awesome": "^4.3"
+        "fortawesome/font-awesome": "^4.3",
+        "mrclay/minify": "^2.2"
     }
 }
