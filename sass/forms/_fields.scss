@@ -54,7 +54,7 @@ label > small {
     &:before {
       @extend .#{$fa-css-prefix};
       @extend .#{$fa-css-prefix}-#{$fa_icon};
-      font-color: #{$form_color};
+      color: mix($color__text-main, $form_color);
       float:right;
     }
   }
