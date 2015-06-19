@@ -2134,6 +2134,10 @@ dt {
 dd {
   margin: 0 1.5em 1.5em; }
 
+div.li-arrow-circle-o-right ul {
+  padding-left: 1em; }
+div.li-arrow-circle-o-right li {
+  list-style-type: none; }
 div.li-arrow-circle-o-right li:before {
   padding-right: 0.5em; }
 

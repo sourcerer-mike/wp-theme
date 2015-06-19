@@ -1,4 +1,12 @@
 div.li-arrow-circle-o-right {
+  ul {
+    padding-left: 1em;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
   li:before {
     @extend .fa;
     @extend .fa-arrow-circle-o-right;
