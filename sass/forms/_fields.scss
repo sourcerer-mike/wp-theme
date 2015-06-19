@@ -41,14 +41,14 @@ label > small {
   display: block;
 }
 
-@each $class, $color in
-        (error, #f00),
+@each $class, $form_color in
+        (error, #f11),
         (warning, #fa3),
         (notice, #fe4),
         (success, #9f7),
 {
-  label.#{$class} {
-    border: 2px solid $color;
-    background: mix($color, $color__background-body, 33%);
+  label.form-#{$class} {
+    border: 2px solid #{$form_color};
+    background: mix(#{$form_color}, $color__background-body, 33%);
   }
 }
