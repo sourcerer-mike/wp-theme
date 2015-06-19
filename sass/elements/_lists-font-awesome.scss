@@ -600,12 +600,15 @@
 
     li {
       list-style-type: none;
+      padding-left: 1.5em;
     }
 
     li:before {
       @extend .#{$fa-css-prefix};
       @extend .#{$fa-css-prefix}-#{$fa-icon};
-      padding-right: 0.5em;
+      display: inline-block;
+      width: 1.5em;
+      margin-left: -1.5em;
     }
   }
 }
