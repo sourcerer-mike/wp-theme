@@ -11,11 +11,6 @@
 </IfModule>
 
 #
-# associate .js with “text/javascript” type (if not present in mime.conf)
-#
-AddType text/javascript .js
-
-#
 # configure mod_headers
 #
 # URL: http://httpd.apache.org/docs/2.2/mod/mod_headers.html
