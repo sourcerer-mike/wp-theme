@@ -1,0 +1,17 @@
+@each $list-style-type in (
+  decimal-leading-zero,
+  lower-alpha,
+  lower-greek,
+  lower-latin,
+  lower-roman,
+  none,
+  upper-alpha,
+  upper-latin,
+  upper-roman
+) {
+  div.li-#{$list-style-type} {
+    li {
+      list-style-type: #{$list-style-type};
+    }
+  }
+}
