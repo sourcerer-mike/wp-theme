@@ -38,6 +38,10 @@ Tags:
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
 
+// font awesome
+$fa-font-path: 'fonts';
+@import "../vendor/fortawesome/font-awesome/scss/font-awesome";
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
