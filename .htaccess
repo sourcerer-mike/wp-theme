@@ -29,9 +29,9 @@
         Header set Cache-Control "max-age=604800, public"
     </FilesMatch>
 
-    # 3 HOUR
+    # 1 DAY
     <FilesMatch "\.(txt|xml|js|css)$">
-        Header set Cache-Control "max-age=10800"
+        Header set Cache-Control "max-age=86400"
     </FilesMatch>
 
     # NEVER CACHE
