@@ -1,4 +1,4 @@
-@each $list-style-type in (
+@each $lst in
   decimal-leading-zero,
   lower-alpha,
   lower-greek,
@@ -8,10 +8,10 @@
   upper-alpha,
   upper-latin,
   upper-roman
-) {
-  div.li-#{$list-style-type} {
+{
+  div.li-#{$lst} {
     li {
-      list-style-type: #{$list-style-type};
+      list-style-type: #{$lst};
     }
   }
 }
