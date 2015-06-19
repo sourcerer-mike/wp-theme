@@ -25,3 +25,11 @@ textarea {
 	padding-left: 3px;
 	width: 100%;
 }
+
+label {
+  display: block;
+}
+
+input[type="checkbox"] {
+  margin: 0.5em 0.5em 0.5em 0;
+}
