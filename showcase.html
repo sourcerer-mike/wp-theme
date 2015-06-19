@@ -1,41 +1,44 @@
 <form>
-    <input type="text" placeholder="Einzeilige Eingabe"/>
-    <br/>
-    <br/>
+    <label for="">
+        <input type="text" placeholder="Einzeilige Eingabe"/>
+    </label>
     <label for="">
         <textarea>Mehrzeilige
-        Eingabe</textarea>
+Eingabe</textarea>
     </label>
 
-    <br/><br/>
     <label> <input type="checkbox"/> Haken setzen</label>
     <label> <input type="checkbox"/> Auch gleich mehrere</label>
     <label> <input type="checkbox"/> Oder sogar alle</label>
 
-    <br/><br/>
     <label> <input type="radio" name="foo"/> Sich entscheiden müssen</label>
     <label> <input type="radio" name="foo"/> Nur eines nehmen dürfen</label>
     <label> <input type="radio" name="foo"/> Qual der Wahl</label>
+</form>
 
-    <br/><br/>
+<form action="">
+    <label for="">
+        Vor dem Absenden alles normal:
+        <input type="text" placeholder="..."/>
+    </label>
     <label class="form-error">
         Rot, wenn etwas nicht richtig ist <br/>
-        <input/>
+        <input/><span class="errspan"></span>
         <small>Das ist keine E-Mail-Adresse.</small>
     </label>
     <label class="form-warning">
         Orange, wenn etwas nicht geht.<br />
-        <input/>
+        <input/><span class="errspan"></span>
         <small>Der Benutzer existiert bereits.</small>
     </label>
     <label class="form-notice">
         Hervorheben, bei Tipps und Co. <br/>
-        <input/>
+        <input/><span class="errspan"></span>
         <small>Das Passwort geht noch sicherer.</small>
     </label>
     <label class="form-success">
         Grün, wenn alles passt. <br/>
-        <input/>
+        <input/><span class="errspan"></span>
         <small>Vielen Dank, Ihre Adresse ist in Ordnung.</small>
     </label>
 </form>

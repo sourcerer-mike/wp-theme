@@ -41,14 +41,21 @@ label > small {
   display: block;
 }
 
-@each $class, $form_color in
-        (error, #f00),
-        (warning, #fa3),
-        (notice, #fe4),
-        (success, #9f7),
+@each $class, $form_color, $fa_icon in
+        (error, #f00, exclamation-circle),
+        (warning, #fa3, exclamation-circle),
+        (notice, #fe4, info-circle),
+        (success, #9f7, check),
 {
   label.form-#{$class} {
     border: 2px solid $form_color;
     background: transparentize($form_color, 0.67);
+
+    &:before {
+      @extend .#{$fa-css-prefix};
+      @extend .#{$fa-css-prefix}-#{$fa_icon};
+      font-color: #{$form_color};
+      float:right;
+    }
   }
 }
