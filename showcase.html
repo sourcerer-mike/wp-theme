@@ -1,3 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
 <form>
     <label for="">
         <input type="text" placeholder="Einzeilige Eingabe"/>
@@ -18,27 +27,46 @@ Eingabe</textarea>
 
 <form action="">
     <label for="">
-        Vor dem Absenden alles normal:
+        <span>Vor dem Absenden alles normal:</span>
         <input type="text" placeholder="..."/>
     </label>
     <label class="form-error">
-        Rot, wenn etwas nicht richtig ist <br/>
-        <input/><span class="errspan"></span>
+        <span>Rot, wenn etwas nicht richtig ist</span>
+        <input value="7raeuber(at)example.org"/><span class="errspan"></span>
         <small>Das ist keine E-Mail-Adresse.</small>
     </label>
     <label class="form-warning">
-        Orange, wenn etwas nicht geht.<br />
-        <input/><span class="errspan"></span>
+        <span>Orange, wenn etwas nicht geht.</span>
+        <input value="Mike"/><span class="errspan"></span>
         <small>Der Benutzer existiert bereits.</small>
     </label>
     <label class="form-notice">
-        Hervorheben, bei Tipps und Co. <br/>
-        <input/><span class="errspan"></span>
+        <span>Hervorheben, bei Tipps und Co.</span>
+        <input value="123"/>
         <small>Das Passwort geht noch sicherer.</small>
     </label>
     <label class="form-success">
-        Grün, wenn alles passt. <br/>
+        <span>Grün, wenn alles passt.</span>
         <input/><span class="errspan"></span>
         <small>Vielen Dank, Ihre Adresse ist in Ordnung.</small>
     </label>
 </form>
+
+<form action="">
+    <label for="">
+        <span>Stimmung!</span>
+        <div class="dropdown-wrapper">
+            <select name="" id="">
+                <option value="">Happy</option>
+                <option value="">Herzlich</option>
+                <option value="">Stressig</option>
+                <option value="">Zufrieden</option>
+                <option value="">Verliebt</option>
+            </select>
+        </div>
+        <small>Wählen Sie eine Stimmung.</small>
+    </label>
+</form>
+
+</body>
+</html>
