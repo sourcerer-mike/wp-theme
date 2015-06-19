@@ -49,6 +49,6 @@ label > small {
 {
   label.form-#{$class} {
     border: 2px solid $form_color;
-    background: transparentize($form_color, 0.33);
+    background: transparentize($form_color, 0.67);
   }
 }
