@@ -28,9 +28,27 @@ textarea {
 
 label {
   display: block;
+  padding: 0.5em;
+  border: 2px solid $color__background-body;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-  margin: 0.5em 0.5em 0.5em 0;
+  margin-right: 0.5em;
+}
+
+label > small {
+  display: block;
+}
+
+@each $class, $color in
+        (error, #f00),
+        (warning, #fa3),
+        (notice, #fe4),
+        (success, #9f7),
+{
+  label.#{$class} {
+    border: 2px solid $color;
+    background: mix($color, $color__background-body, 33%);
+  }
 }
