@@ -1,58 +1,53 @@
 <?php
 /**
- * Sample implementation of the Custom Header feature
- * http://codex.wordpress.org/Custom_Headers
+ * Sample implementation of the Custom Header feature.
  *
  * You can add an optional custom header image to header.php like so ...
  *
-	* <?php if ( get_header_image() ) : ?>
-	* <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-		* <img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
-	* </a>
-	* <?php endif; // End header image check. ?>
+	<?php if ( get_header_image() ) : ?>
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+		<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
+	</a>
+	<?php endif; // End header image check. ?>
  *
- * @package rmp-base
+ * @link http://codex.wordpress.org/Custom_Headers
+ *
+ * @package _s
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses _rmp_base_header_style()
- * @uses _rmp_base_admin_header_style()
- * @uses _rmp_base_admin_header_image()
+ * @uses _s_header_style()
+ * @uses _s_admin_header_style()
+ * @uses _s_admin_header_image()
  */
-function _rmp_base_custom_header_setup()
-{
-	add_theme_support(
-		'custom-header',
-		apply_filters(
-			'_rmp_base_custom_header_args', [
+function _s_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( '_s_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => '_rmp_base_header_style',
-		'admin-head-callback'    => '_rmp_base_admin_header_style',
-		'admin-preview-callback' => '_rmp_base_admin_header_image',
-	] )
-	);
+		'wp-head-callback'       => '_s_header_style',
+		'admin-head-callback'    => '_s_admin_header_style',
+		'admin-preview-callback' => '_s_admin_header_image',
+	) ) );
 }
+add_action( 'after_setup_theme', '_s_custom_header_setup' );
 
-add_action('after_setup_theme', '_rmp_base_custom_header_setup');
-
-if (!function_exists('_rmp_base_header_style') ) :
+if ( ! function_exists( '_s_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see _rmp_base_custom_header_setup().
+ * @see _s_custom_header_setup().
  */
-	function _rmp_base_header_style() {
+function _s_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
 	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value.
-	if ( HEADER_TEXTCOLOR == $header_text_color ) {
+	if ( HEADER_TEXTCOLOR === $header_text_color ) {
 		return;
 	}
 
@@ -61,7 +56,7 @@ if (!function_exists('_rmp_base_header_style') ) :
 	<style type="text/css">
 	<?php
 		// Has the text been hidden?
-		if ( 'blank' == $header_text_color ) :
+		if ( ! display_header_text() ) :
 	?>
 		.site-title,
 		.site-description {
@@ -79,16 +74,16 @@ if (!function_exists('_rmp_base_header_style') ) :
 	<?php endif; ?>
 	</style>
 	<?php
-	}
-endif; // _rmp_base_header_style
+}
+endif; // _s_header_style
 
-if (!function_exists('_rmp_base_admin_header_style') ) :
+if ( ! function_exists( '_s_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see _rmp_base_custom_header_setup().
+ * @see _s_custom_header_setup().
  */
-	function _rmp_base_admin_header_style() {
+function _s_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -107,16 +102,16 @@ if (!function_exists('_rmp_base_admin_header_style') ) :
 		}
 	</style>
 <?php
-	}
-endif; // _rmp_base_admin_header_style
+}
+endif; // _s_admin_header_style
 
-if (!function_exists('_rmp_base_admin_header_image') ) :
+if ( ! function_exists( '_s_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see _rmp_base_custom_header_setup().
+ * @see _s_custom_header_setup().
  */
-	function _rmp_base_admin_header_image() {
+function _s_admin_header_image() {
 ?>
 	<div id="headimg">
 		<h1 class="displaying-header-text">
@@ -128,5 +123,5 @@ if (!function_exists('_rmp_base_admin_header_image') ) :
 		<?php endif; ?>
 	</div>
 <?php
-	}
-endif; // _rmp_base_admin_header_image
+}
+endif; // _s_admin_header_image

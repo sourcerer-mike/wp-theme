@@ -2,7 +2,9 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package rmp-base
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package _s
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {

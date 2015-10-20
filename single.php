@@ -2,7 +2,9 @@
 /**
  * The template for displaying all single posts.
  *
- * @package rmp-base
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package _s
  */
 
 get_header(); ?>
