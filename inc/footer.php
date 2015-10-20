@@ -11,11 +11,31 @@ add_action(
 					'singular_name' => __('Footer')
 				],
 				'public'       => true,
-				'show_in_menu' => 'themes.php'
+				'show_in_menu' => 'themes.php',
+                'supports' => array('editor'),
 			]
 		);
 	}
 );
+
+add_filter('manage_edit-theme_footer_columns', '_s_edit_theme_footer_columns');
+
+function _s_edit_theme_footer_columns($columns)
+{
+    $columns[ 'template' ] = __( 'Template' );
+
+    return $columns;
+}
+
+add_action( 'manage_theme_footer_posts_custom_column', '_s_manage_theme_footer_columns', 10, 2 );
+
+function _s_manage_theme_footer_columns( $column, $post_id ) {
+    switch ( $column ) {
+        case 'template':
+            echo get_post_meta( $post_id, '_page_template', true );
+            break;
+    }
+}
 
 add_action(
 	'add_meta_boxes',

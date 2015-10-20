@@ -6,16 +6,36 @@ add_action(
         register_post_type(
             'theme_header',
             [
-                'labels'       => [
-                    'name'          => __('Headers'),
+                'labels' => [
+                    'name' => __('Headers'),
                     'singular_name' => __('Header')
                 ],
-                'public'       => true,
-                'show_in_menu' => 'themes.php'
+                'public' => true,
+                'show_in_menu' => 'themes.php',
+                'supports' => array('editor'),
             ]
         );
     }
 );
+
+add_filter('manage_edit-theme_header_columns', '_s_edit_theme_header_columns');
+
+function _s_edit_theme_header_columns($columns)
+{
+    $columns[ 'template' ] = __( 'Template' );
+
+    return $columns;
+}
+
+add_action( 'manage_theme_header_posts_custom_column', '_s_manage_theme_header_columns', 10, 2 );
+
+function _s_manage_theme_header_columns( $column, $post_id ) {
+    switch ( $column ) {
+        case 'template':
+            echo get_post_meta( $post_id, '_page_template', true );
+            break;
+    }
+}
 
 add_action(
     'add_meta_boxes',
@@ -61,8 +81,7 @@ add_action(
                 return;
             }
 
-        }
-        else {
+        } else {
 
             if (!current_user_can('edit_post', $post_id)) {
                 return;
