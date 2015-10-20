@@ -150,3 +150,9 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+require get_template_directory() . '/inc/cpt-left-sidebar.php';
+require get_template_directory() . '/inc/cpt-right-sidebar.php';
+require get_template_directory() . '/inc/header.php';
+require get_template_directory() . '/inc/footer.php';
